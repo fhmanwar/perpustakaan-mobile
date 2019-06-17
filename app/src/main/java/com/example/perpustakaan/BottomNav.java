@@ -9,6 +9,10 @@ import android.support.annotation.NonNull;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import com.example.perpustakaan.fragment.HistoryFragment;
+import com.example.perpustakaan.fragment.HomeFragment;
+import com.example.perpustakaan.fragment.ProfileFragment;
+
 public class BottomNav extends AppCompatActivity {
     private TextView mTextMessage;
 
@@ -17,24 +21,22 @@ public class BottomNav extends AppCompatActivity {
 
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-//            Fragment fragment;
+            Fragment fragment;
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-//                    fragment = new Home();
-//                    getSupportFragmentManager().beginTransaction().
-//                            replace(R.id.containerFragment, fragment, fragment.getClass().getSimpleName()).commit();
-                    setContentView(R.layout.activity_home);
-                    mTextMessage.setText(R.string.title_setting);
+                    fragment = new HomeFragment();
+                    getSupportFragmentManager().beginTransaction().
+                            replace(R.id.containerInner, fragment, fragment.getClass().getSimpleName()).commit();
                     return true;
-                case R.id.navigation_account:
-//                    Intent Acc = new Intent(String.valueOf(Login.class));
-//                    startActivity(Acc);
-//                    finish();
-                    setContentView(R.layout.activity_login);
+                case R.id.navigation_history:
+                    fragment = new HistoryFragment();
+                    getSupportFragmentManager().beginTransaction().
+                            replace(R.id.containerInner, fragment, fragment.getClass().getSimpleName()).commit();
                     return true;
-                case R.id.navigation_setting:
-//                    mTextMessage.setText(R.string.title_setting);
-                    setContentView(R.layout.activity_register);
+                case R.id.navigation_profile:
+                    fragment = new ProfileFragment();
+                    getSupportFragmentManager().beginTransaction().
+                            replace(R.id.containerInner, fragment, fragment.getClass().getSimpleName()).commit();
                     return true;
             }
             return false;

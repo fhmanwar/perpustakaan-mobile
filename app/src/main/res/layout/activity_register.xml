@@ -32,9 +32,9 @@
             android:layout_height="wrap_content"
             android:background="@drawable/input"
             android:padding="15dp"
-            android:inputType="text"
+            android:inputType="textPersonName"
             android:textSize="15dp"
-            tools:hint="Nama"
+            android:hint="Nama"
             android:textColor="@color/md_white_1000"
             android:textColorHint="@color/md_white_1000"
             android:layout_marginBottom="15dp"/>
@@ -60,7 +60,7 @@
             android:padding="15dp"
             android:inputType="text"
             android:textSize="15dp"
-            tools:hint="Username"
+            android:hint="Username"
             android:textColor="@color/md_white_1000"
             android:textColorHint="@color/md_white_1000"
             android:layout_marginBottom="15dp"/>
@@ -73,7 +73,7 @@
             android:padding="15dp"
             android:inputType="textPassword"
             android:textSize="15dp"
-            tools:hint="Password"
+            android:hint="Password"
             android:textColor="@color/md_white_1000"
             android:textColorHint="@color/md_white_1000"
             android:layout_marginBottom="15dp"/>
