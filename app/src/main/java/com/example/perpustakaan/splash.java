@@ -18,10 +18,10 @@ public class splash extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                // setelah loading menuju dashboard
-                Intent Home = new Intent(splash.this, ButtonNav.class);
-                startActivity(Home);
-                finish();
+            // setelah loading menuju dashboard
+            Intent Home = new Intent(splash.this, BottomNav.class);
+            startActivity(Home);
+            finish();
             }
         },time_loading);
     }
