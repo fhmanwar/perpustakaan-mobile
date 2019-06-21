@@ -1,16 +1,94 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".Home">
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="0dp">
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/isi"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0.0px"
+        android:elevation="0dp"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
+        app:cardPreventCornerOverlap="false"
+        app:cardUseCompatPadding="true">
 
-    </android.support.v7.widget.RecyclerView>
+        private TextView postJudul;
+        private TextView postPenulis;
+        private TextView postPenerbit;
+        private TextView postThnterbit;
+        private ImageView postImage;
+        private TextView postJmlbuku;
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp" >
+
+            <TextView
+                android:id="@+id/postJudul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/md_black_1000"
+                tools:textSize="12sp"
+                android:text="Judul"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <TextView
+                android:id="@+id/postPenulis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:textSize="8sp"
+                android:text="Penulis"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:id="@+id/postImage"
+                android:layout_width="match_parent"
+                android:layout_height="225dp"
+                android:layout_gravity="center"
+                />
+
+            <TextView
+                android:id="@+id/postPenerbit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penerbit"
+                android:textSize="12dp"
+                android:textColor="@color/md_black_1000"
+                android:paddingBottom="5dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/postThn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Penerbit"
+                android:textSize="12dp"
+                android:textColor="@color/md_black_1000" />
+
+            <TextView
+                android:id="@+id/postJmlbuku"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="8dp"
+                android:textColor="@color/md_red_500"
+                android:text="Waktu" />
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
 
 </LinearLayout>

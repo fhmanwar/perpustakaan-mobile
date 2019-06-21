@@ -6,8 +6,9 @@ public class Config {
 //    public static final String DATA_POSTRELAWAN    = "https://dinusheroes.com/sosialbencana/api_relawan/post";
 //    public static final String DATA_BYRELAWAN = "https://dinusheroes.com/sosialbencana/api_relawan/postrelawan/";
 //    public static final String DATA_POSTDETAIL = "https://dinusheroes.com/sosialbencana/api_user/getpostdetail/";
-    public static final String DATA_POSTBUKU = "http://192.168.100.208/perpustakaan/api/buku/";
-
+    public static final String DATA_POSTBUKU = "http://192.168.0.4/perpustakaan/api/buku/";
+//    192.168.0.4
+//    172.20.10.4
 //    // ADD DATA
 //    public static final String ADD_RELAWAN = "https://dinusheroes.com/sosialbencana/api_relawan/register";
 //    public static final String ADD_POST = "https://dinusheroes.com/sosialbencana/api_relawan/posting";

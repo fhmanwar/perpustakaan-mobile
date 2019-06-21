@@ -60,7 +60,7 @@ public class HomeFragment extends Fragment {
         if (ContextCompat.checkSelfPermission(getContext(), android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(getContext(), android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(getActivity(), new String[]{Manifest.permission.ACCESS_FINE_LOCATION, Manifest.permission.ACCESS_COARSE_LOCATION}, 1);
         }
-        View view = inflater.inflate(R.layout.activity_home, container, false);
+        View view = inflater.inflate(R.layout.fragment_home, container, false);
         recyclerView = view.findViewById(R.id.isi);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(getContext(), 1));
@@ -83,34 +83,18 @@ public class HomeFragment extends Fragment {
                 progressDialog.dismiss();
                 try {
                     JSONObject jsonObject = new JSONObject(response);
-                    JSONArray array = jsonObject.getJSONArray("buku");
+                    JSONArray array = jsonObject.getJSONArray("result");
 
                     for (int i = 0; i < array.length(); i++) {
                         JSONObject data = array.getJSONObject(i);
                         HomeItem item = new HomeItem(
                                 data.getString("id_buku"),
-                                data.getString("id_user"),
-                                data.getString("id_jenis"),
-                                data.getString("id_bahasa"),
                                 data.getString("judul_buku"),
                                 data.getString("penulis_buku"),
-                                data.getString("subjek_buku"),
-                                data.getString("kode_buku"),
-                                data.getString("kolasi"),
                                 data.getString("penerbit"),
                                 data.getString("tahun_terbit"),
-                                data.getString("no_seri"),
-                                data.getString("status_buku"),
-                                data.getString("ringkasan"),
                                 data.getString("cover_buku"),
-                                data.getString("jumlah_buku"),
-                                data.getString("tanggal_entri"),
-                                data.getString("tanggal"),
-                                data.getString("nama_jenis"),
-                                data.getString("kode_jenis"),
-                                data.getString("nama_bahasa"),
-                                data.getString("kode_bahasa"),
-                                data.getString("nama")
+                                data.getString("jumlah_buku")
                         );
                         listItems.add(item);
                     }
